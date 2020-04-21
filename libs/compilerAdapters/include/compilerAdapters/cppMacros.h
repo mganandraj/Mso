@@ -59,6 +59,10 @@
     MSO_NO_COPY_CTOR(type);                                                                                            \
     MSO_NO_COPY_ASSIGNMENT(type)
 
+#ifndef DECLARE_COPYCONSTR_AND_ASSIGNMENT
+#define DECLARE_COPYCONSTR_AND_ASSIGNMENT( C ) MSO_NO_COPY_CTOR( C ); MSO_NO_COPY_ASSIGNMENT( C )
+#endif
+
 #if defined(__cplusplus)
 #include <type_traits>
 

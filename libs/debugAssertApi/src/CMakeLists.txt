@@ -3,5 +3,5 @@
 
 liblet_sources(
   SOURCES
-    debugAssertApi.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/debugAssertApi.cpp
 )

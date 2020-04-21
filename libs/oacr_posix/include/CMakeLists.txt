@@ -3,6 +3,6 @@
 
 liblet_includes(
   INCLUDES_POSIX
-    sal.h
-    specstrings.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/sal.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/specstrings.h
 )

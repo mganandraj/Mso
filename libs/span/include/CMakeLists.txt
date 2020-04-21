@@ -3,5 +3,5 @@
 
 liblet_includes(
   INCLUDES
-    span/span.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/span/span.h
 )

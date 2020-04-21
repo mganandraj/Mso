@@ -3,21 +3,21 @@
 
 liblet_includes(
   INCLUDES
-    motifCpp/assert_IgnorePlat_emptyImpl.h
-    motifCpp/assert_motifApi.h
-    motifCpp/libletAwareMemLeakDetection.h
-    motifCpp/motifCppTest.h
-    motifCpp/motifCppTestBase.h
-    motifCpp/testCheck.h
-    motifCpp/testInfo.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/motifCpp/assert_IgnorePlat_emptyImpl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/motifCpp/assert_motifApi.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/motifCpp/libletAwareMemLeakDetection.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/motifCpp/motifCppTest.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/motifCpp/motifCppTestBase.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/motifCpp/testCheck.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/motifCpp/testInfo.h
   INCLUDES_APPLE
-    motifCpp/assert_IgnorePlat_apple.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/motifCpp/assert_IgnorePlat_apple.h
 )
 
 if(${MSO_LIBLET_TEST} STREQUAL GTEST)
   liblet_includes(
     INCLUDES
-      motifCpp/gTestAdapter.h
+          ${CMAKE_CURRENT_SOURCE_DIR}/motifCpp/gTestAdapter.h
   )
 elseif(${MSO_LIBLET_TEST} STREQUAL XCTEST)
 #  liblet_includes(

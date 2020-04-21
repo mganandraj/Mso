@@ -3,15 +3,15 @@
 
 liblet_includes(
   INCLUDES
-    object/fixedSwarm.h
-    object/lazyInit.h
-    object/make.h
-    object/objectRefCount.h
-    object/objectWithWeakRef.h
-    object/queryCast.h
-    object/refCounted.h
-    object/refCountedObject.h
-    object/swarm.h
-    object/unknownObject.h
-    object/weakPtr.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/object/fixedSwarm.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/object/lazyInit.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/object/make.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/object/objectRefCount.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/object/objectWithWeakRef.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/object/queryCast.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/object/refCounted.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/object/refCountedObject.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/object/swarm.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/object/unknownObject.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/object/weakPtr.h
   )

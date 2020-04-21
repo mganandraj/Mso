@@ -3,6 +3,6 @@
 
 liblet_sources(
   SOURCES
-    memoryApi.cpp
-    memoryLeakScope_EmptyImpl.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/memoryApi.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/memoryLeakScope_EmptyImpl.cpp
 )

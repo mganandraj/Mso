@@ -3,7 +3,7 @@
 
 liblet_includes(
   INCLUDES
-    debugAssertApi/debugAssertApi.h
-    debugAssertApi/debugAssertDetails.h
-    debugAssertApi/debugAssertDisabler.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/debugAssertApi/debugAssertApi.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/debugAssertApi/debugAssertDetails.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/debugAssertApi/debugAssertDisabler.h
 )

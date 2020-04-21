@@ -3,6 +3,6 @@
 
 liblet_includes(
   INCLUDES
-    tagUtils/tagTypes.h
-    tagUtils/tagUtils.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/tagUtils/tagTypes.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/tagUtils/tagUtils.h
 )

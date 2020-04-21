@@ -1,24 +1,13 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT license.
+# For more information about using CMake with Android Studio, read the
+# documentation: https://d.android.com/studio/projects/add-native-code.html
 
-# set minimum cmake version
-cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
-cmake_policy(SET CMP0092 NEW)
+# Sets the minimum version of CMake required to build the native library.
 
-# project name and language
-project(Mso
-  HOMEPAGE_URL "https://github.com/microsoft/Mso"
-  LANGUAGES CXX)
+# cmake_minimum_required(VERSION 3.4.1)
+# cmake_policy(SET CMP0076 NEW)
 
-# include liblet.cmake with liblet-specific functions
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/tools/cmake")
-include(liblet)
-
-if(MSO_ENABLE_UNIT_TESTS)
-  enable_testing()
-endif()
+#list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/tools/cmake")
+#include(liblet)
 
 add_subdirectory(external)
 add_subdirectory(libs)
-
-liblet_detect_dependency_cycles()

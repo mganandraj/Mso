@@ -3,5 +3,5 @@
 
 liblet_includes(
   INCLUDES
-    dispatchQueue/dispatchQueue.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/dispatchQueue/dispatchQueue.h
 )

@@ -3,5 +3,5 @@
 
 liblet_includes(
   INCLUDES
-    eventWaitHandle/eventWaitHandle.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/eventWaitHandle/eventWaitHandle.h
 )

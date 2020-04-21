@@ -3,14 +3,14 @@
 
 liblet_includes(
   INCLUDES
-    compilerAdapters/compilerFeatures.h
-    compilerAdapters/compilerWarnings.h
-    compilerAdapters/compilerWarnings_impl.h
-    compilerAdapters/cppMacros.h
-    compilerAdapters/cppMacrosDebug.h
-    compilerAdapters/declspecDefinitions.h
-    compilerAdapters/functionDecorations.h
-    compilerAdapters/intrinsics.h
-    compilerAdapters/linker.h
-    compilerAdapters/managedCpp.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/compilerAdapters/compilerFeatures.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/compilerAdapters/compilerWarnings.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/compilerAdapters/compilerWarnings_impl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/compilerAdapters/cppMacros.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/compilerAdapters/cppMacrosDebug.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/compilerAdapters/declspecDefinitions.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/compilerAdapters/functionDecorations.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/compilerAdapters/intrinsics.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/compilerAdapters/linker.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/compilerAdapters/managedCpp.h
   )

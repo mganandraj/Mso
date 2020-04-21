@@ -3,5 +3,5 @@
 
 liblet_sources(
   SOURCES
-    activeObject.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/activeObject.cpp
 )

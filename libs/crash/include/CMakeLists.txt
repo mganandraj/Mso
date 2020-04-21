@@ -3,5 +3,5 @@
 
 liblet_includes(
   INCLUDES
-    crash/verifyElseCrash.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/crash/verifyElseCrash.h
 )

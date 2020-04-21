@@ -3,6 +3,6 @@
 
 liblet_includes(
   INCLUDES
-    oacr/oacr.h
-    oacr/oacrsal.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/oacr/oacr.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/oacr/oacrsal.h
 )

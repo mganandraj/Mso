@@ -3,9 +3,9 @@
 
 liblet_includes(
   INCLUDES
-    smartPtr/cntPtr.h
-    smartPtr/smartPointerBase.h
-    smartPtr/smartPointers.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/smartPtr/cntPtr.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/smartPtr/smartPointerBase.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/smartPtr/smartPointers.h
   INCLUDES_WIN
-    smartPtr/smartHandles.h    
+        ${CMAKE_CURRENT_SOURCE_DIR}/smartPtr/smartHandles.h
 )

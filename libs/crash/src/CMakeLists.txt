@@ -3,5 +3,5 @@
 
 liblet_sources(
   SOURCES
-    crash_min.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/crash_min.cpp
 )

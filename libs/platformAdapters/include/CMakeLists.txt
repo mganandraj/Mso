@@ -3,8 +3,8 @@
 
 liblet_includes(
   INCLUDES
-    platformAdapters/IUnknownShim.h 
-    platformAdapters/types.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/platformAdapters/IUnknownShim.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/platformAdapters/types.h
   INCLUDES_WIN
-    platformAdapters/windowsFirst.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/platformAdapters/windowsFirst.h
 )

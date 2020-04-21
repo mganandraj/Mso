@@ -3,9 +3,9 @@
 
 liblet_sources(
   SOURCES
-    eventWaitHandleImpl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/eventWaitHandleImpl.h
   SOURCES_WIN
-    eventWaitHandleImpl_win.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/eventWaitHandleImpl_win.cpp
   SOURCES_POSIX
-    eventWaitHandleImpl_posix.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/eventWaitHandleImpl_posix.cpp
 )

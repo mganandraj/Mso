@@ -3,11 +3,11 @@
 
 liblet_includes(
   INCLUDES
-    cppExtensions/array.h
-    cppExtensions/autoRestore.h
-    cppExtensions/stringLiteral.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cppExtensions/array.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cppExtensions/autoRestore.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cppExtensions/stringLiteral.h
   INCLUDES_WIN
-    cppExtensions/threadLocal_fls.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cppExtensions/threadLocal_fls.h
   INCLUDES_POSIX
-    cppExtensions/threadLocal_pthread.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/cppExtensions/threadLocal_pthread.h
 )

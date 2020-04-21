@@ -3,25 +3,25 @@
 
 liblet_includes(
   INCLUDES
-    future/cancellationToken.h
-    future/details/arrayView.h
-    future/details/cancellationErrorProvider.h
-    future/details/cancellationException.h
-    future/details/executor.h
-    future/details/futureFuncInl.h
-    future/details/futureInl.h
-    future/details/futureTask.h
-    future/details/futureWeakPtrInl.h
-    future/details/ifuture.h
-    future/details/maybeInvoker.h
-    future/details/promiseGroupInl.h
-    future/details/promiseInl.h
-    future/details/resultTraits.h
-    future/details/sharedFutureInl.h
-    future/details/timeoutException.h
-    future/details/whenAllInl.h
-    future/details/whenAnyInl.h
-    future/future.h
-    future/futureForwardDecl.h
-    future/futureWait.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/cancellationToken.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/arrayView.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/cancellationErrorProvider.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/cancellationException.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/executor.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/futureFuncInl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/futureInl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/futureTask.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/futureWeakPtrInl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/ifuture.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/maybeInvoker.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/promiseGroupInl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/promiseInl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/resultTraits.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/sharedFutureInl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/timeoutException.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/whenAllInl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/details/whenAnyInl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/future.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/futureForwardDecl.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/future/futureWait.h
 )

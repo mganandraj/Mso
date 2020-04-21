@@ -3,7 +3,7 @@
 
 liblet_includes(
   INCLUDES
-    memoryApi/leakDetection.h
-    memoryApi/memoryApi.h
-    memoryApi/memoryLeakScope.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/memoryApi/leakDetection.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/memoryApi/memoryApi.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/memoryApi/memoryLeakScope.h
 )

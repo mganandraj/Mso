@@ -4,7 +4,7 @@
 if(${MSO_LIBLET_TEST} STREQUAL GTEST)
   liblet_sources(
     SOURCES
-      gTestMain.cpp
+          ${CMAKE_CURRENT_SOURCE_DIR}/gTestMain.cpp
   )
 elseif(${MSO_LIBLET_TEST} STREQUAL XCTEST)
 #  liblet_sources(

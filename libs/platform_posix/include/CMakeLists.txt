@@ -3,7 +3,7 @@
 
 liblet_includes(
   INCLUDES_POSIX
-    guiddef.h
-    pshpack8.h
-    poppack.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/guiddef.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/pshpack8.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/poppack.h
 )

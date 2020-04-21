@@ -3,5 +3,5 @@
 
 liblet_sources(
   SOURCES
-    errorCode.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/errorCode.cpp
 )

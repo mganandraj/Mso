@@ -3,6 +3,6 @@
 
 liblet_includes(
   INCLUDES
-    comUtil/qiCast.h
-    comUtil/qiCastCore.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/comUtil/qiCast.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/comUtil/qiCastCore.h
 )

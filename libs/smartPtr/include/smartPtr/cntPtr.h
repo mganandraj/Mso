@@ -1,6 +1,5 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
-
 #pragma once
 #ifndef MSO_SMARTPTR_CNTPTR_H
 #define MSO_SMARTPTR_CNTPTR_H

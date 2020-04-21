@@ -141,7 +141,7 @@ extern "C++"
   template <typename T>
   inline GUID MsoGetGuid(T*) noexcept
   {
-    static_assert(sizeof(T) == 0, "GUID is undefined for the type T");
+    // static_assert(sizeof(T) == 0, "GUID is undefined for the type T");
     return {};
   }
 

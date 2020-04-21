@@ -3,5 +3,5 @@
 
 liblet_includes(
   INCLUDES
-    activeObject/activeObject.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/activeObject/activeObject.h
 )

@@ -1,7 +1,7 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT license.
 
-cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
+# cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 
 # Store the liblet.cmake file directory in a variable
 set(LIBLET_CMAKE_DIR ${CMAKE_CURRENT_LIST_DIR})
@@ -11,7 +11,7 @@ set(LIBLET_CMAKE_DIR ${CMAKE_CURRENT_LIST_DIR})
 ###########################################
 
 # Set the target platform we compile code for.
-set(MSO_LIBLET_PLATFORM WIN32 CACHE STRING "Liblet platform")
+set(MSO_LIBLET_PLATFORM LINUX CACHE STRING "Liblet platform")
 set_property(CACHE MSO_LIBLET_PLATFORM PROPERTY STRINGS ANDROID IOS LINUX MAC WIN32 WINRT)
 message(STATUS "Liblet platform: ${MSO_LIBLET_PLATFORM}")
 
@@ -27,7 +27,7 @@ message(STATUS "Enable testing: ${MSO_ENABLE_UNIT_TESTS}")
 
 # For each include file we generate a simple .cpp file to check that it is self-contained.
 # We allow to disable it because it takes extra compile time
-option(MSO_ENABLE_INCLUDES_CHECKS "Enable checking of include files" ON)
+option(MSO_ENABLE_INCLUDES_CHECKS "Enable checking of include files" OFF)
 message(STATUS "Enable includes checks: ${MSO_ENABLE_INCLUDES_CHECKS}")
 
 ###########################################
@@ -68,7 +68,7 @@ function(liblet LIBLET_TARGET)
   # We always create STATIC library since INTERFACE libraries have limitations
   # such as not allowing custom commands.
   message(STATUS "Defining liblet Mso::${LIBLET_TARGET}")
-  add_library(${LIBLET_TARGET} STATIC)
+  add_library(${LIBLET_TARGET} STATIC ${LIBLET_CMAKE_DIR}/empty.cpp)
   add_library(Mso::${LIBLET_TARGET} ALIAS ${LIBLET_TARGET})
 
   _liblet_set_platform_definitions(${LIBLET_TARGET})
@@ -88,14 +88,14 @@ function(liblet LIBLET_TARGET)
   endif()
 
   # Process test files if tests/CMakeLists.txt exists and tests are enabled
-  if(MSO_ENABLE_UNIT_TESTS AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests/CMakeLists.txt")
-    add_subdirectory(tests)
-  endif()
+  #if(MSO_ENABLE_UNIT_TESTS AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests/CMakeLists.txt")
+  #  add_subdirectory(tests)
+  #endif()
 
   # Install target
-  install(
-    TARGETS ${LIBLET_TARGET}
-    INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${LIBLET_TARGET})
+  #install(
+  #  TARGETS ${LIBLET_TARGET}
+  #  INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${LIBLET_TARGET})
 endfunction()
 
 function(liblet_includes)
@@ -120,16 +120,16 @@ function(liblet_includes)
   target_sources(${LIBLET_TARGET} PUBLIC ${${LIBLET_TARGET}_INCLUDES})
 
   # Install target include sources
-  foreach(FILE ${${LIBLET_TARGET}_INCLUDES})
-    get_filename_component(DIR ${FILE} DIRECTORY)
-    install(
-      FILES ${FILE}
-      DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${DIR}
-    )
-  endforeach()
+  #foreach(FILE ${${LIBLET_TARGET}_INCLUDES})
+  #  get_filename_component(DIR ${FILE} DIRECTORY)
+  #  install(
+  #    FILES ${FILE}
+  #    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${DIR}
+  #  )
+  #endforeach()
 
   if(${MSO_ENABLE_INCLUDES_CHECKS} AND ${LIBLET_TARGET}_INCLUDES)
-    _liblet_verify_includes(${LIBLET_TARGET} "${${LIBLET_TARGET}_INCLUDES}")
+  #  _liblet_verify_includes(${LIBLET_TARGET} "${${LIBLET_TARGET}_INCLUDES}")
   endif()
 endfunction()
 
@@ -302,27 +302,40 @@ function(_liblet_set_platform_definitions TARGET)
   endif()
 
   target_compile_options(${TARGET}
-    PRIVATE
-      $<$<COMPILE_LANG_AND_ID:CXX,MSVC>:
-        /permissive-
-        /W4
-        /WX>
-      $<$<COMPILE_LANG_AND_ID:CXX,AppleClang,Clang>:
-        -fms-extensions
-        -fms-compatibility-version=19.00
-        -pedantic
-        -Wall
-        -Wextra
-        -Werror
-        -Wno-dollar-in-identifier-extension
-        -Wno-c++17-compat-mangling>
-      $<$<COMPILE_LANG_AND_ID:CXX,GNU>:
-        -pedantic
-        -Wall
-        -Wextra
-        -Werror
-        -Wno-noexcept-type>
-  )
+          PRIVATE
+          -fms-extensions
+          -fms-compatibility-version=19.00
+          -pedantic
+          -Wall
+          -Wextra
+          -Werror
+          -Wno-dollar-in-identifier-extension
+          -Wno-c++17-compat-mangling)
+
+
+
+          #  target_compile_options(${TARGET}
+ #   PRIVATE
+  #    $<$<COMPILE_LANG_AND_ID:CXX,MSVC>:
+   #     /permissive-
+    #    /W4
+     #   /WX>
+#      $<$<COMPILE_LANG_AND_ID:CXX,AppleClang,Clang>:
+ #       -fms-extensions
+  #      -fms-compatibility-version=19.00
+   #     -pedantic
+    #    -Wall
+     #   -Wextra
+      #  -Werror
+       # -Wno-dollar-in-identifier-extension
+        #-Wno-c++17-compat-mangling>
+#      $<$<COMPILE_LANG_AND_ID:CXX,GNU>:
+ #       -pedantic
+  #      -Wall
+   #     -Wextra
+    #    -Werror
+     #   -Wno-noexcept-type>
+  #)
 endfunction()
 
 function(_liblet_verify_includes LIBLET_TARGET LIBLET_INCLUDES)

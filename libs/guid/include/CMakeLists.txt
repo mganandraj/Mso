@@ -3,6 +3,6 @@
 
 liblet_includes(
   INCLUDES
-    guid/msoGuid.h
-    guid/msoGuidDetails.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/guid/msoGuid.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/guid/msoGuidDetails.h
 )

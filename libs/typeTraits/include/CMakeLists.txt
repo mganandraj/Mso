@@ -3,7 +3,7 @@
 
 liblet_includes(
   INCLUDES
-    typeTraits/sfinae.h
-    typeTraits/tags.h
-    typeTraits/typeTraits.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/typeTraits/sfinae.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/typeTraits/tags.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/typeTraits/typeTraits.h
 )
